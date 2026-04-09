@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PREFEITURA DE IMBITUBA - Bem-Estar Animal</title>
+        <link rel="stylesheet" href="estilos.css">
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <header class="cabecalho">
+                <div class="faixa-identidade" aria-label="Identidade visual do centro de bem-estar animal">
+                    <img class="patinhas patinhas-esquerda-superior" src="imagens/PATINHAS-ESQUERDA.png" alt="">
+                    <img class="logo-centro" src="imagens/LOGO.png" alt="Centro de Bem-estar Animal">
+                    <img class="patinhas patinhas-direita-inferior" src="imagens/PATINHAS-DIREITA.png" alt="">
+                </div>
+
+                <h1>ADOTE UM AMIGO</h1>
+
+                <p>
+                    Bem-vindo, aqui você pode visualizar informações e conhecer melhor cada um de nossos animais para adoção,
+                    esperamos com muito carinho, que eles encontrem um lar e uma família que os ame, tanto quanto eles são capazes de
+                    amar de volta.
+                </p>
+
+                <div class="barra-navegacao">
+                    <span>Acesse as informações de cada sessão clicando nos botões a seguir</span>
+
+                    <div class="botoes-navegacao">
+                        <button type="button" class="botao-secao ativo" data-section="cachorros">Cachorros</button>
+                        <button type="button" class="botao-secao" data-section="gatos">Gatos</button>
+                        <button type="button" class="botao-secao" data-section="cavalos">Cavalos</button>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section id="cachorros" class="secao-animal secao-visivel">
+                    <h2>Cachorros para adoção:</h2>
+
+                    <div class="cards-animais" data-cards-container="cachorros"></div>
+
+                    <div class="paginacao-animais" data-pagination="cachorros" aria-label="Paginação dos cachorros"></div>
+                </section>
+
+                <section id="gatos" class="secao-animal secao-oculta">
+                    <h2>Gatos para adoção:</h2>
+
+                    <div class="cards-animais cards-fixos" data-cards-container="gatos"></div>
+
+                    <div class="paginacao-animais vazia" data-pagination="gatos" aria-label="Paginação dos gatos"></div>
+                </section>
+
+                <section id="cavalos" class="secao-animal secao-oculta">
+                    <h2>Cavalos para adoção:</h2>
+
+                    <div class="cards-animais cards-fixos" data-cards-container="cavalos"></div>
+
+                    <div class="paginacao-animais vazia" data-pagination="cavalos" aria-label="Paginação dos cavalos"></div>
+                </section>
+            </main>
+        </div>
+
+        <script src="dados.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

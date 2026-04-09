@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animal - Adoção</title>
+        <link rel="stylesheet" href="../estilos.css">
+
+    </head>
+
+    <body>
+
+        <div class="pagina-animal">
+
+            <div class="conteudo-animal">
+
+                <a href="../index.html" class="botao-voltar">Voltar</a>
+
+                <div class="animal-layout">
+
+                    <div class="animal-esquerda">
+                        <img class="animal-foto" id="animal-foto" src="" alt="">
+                    </div>
+
+                    <div class="animal-direita">
+
+                        <h2 class="animal-nome" id="animal-nome"></h2>
+                        <p class="animal-descricao" id="animal-descricao"></p>
+
+                        <div class="animal-info-box">
+
+                            <div class="info-secao">
+                                <p class="info-titulo">Cuidados Veterinários:</p>
+                                <div class="tags" id="tags-cuidados"></div>
+                            </div>
+
+                            <div class="info-secao">
+                                <p class="info-titulo">Temperamento:</p>
+                                <div class="tags" id="tags-temperamento"></div>
+                            </div>
+
+                            <div class="info-secao">
+                                <p class="info-titulo">Sociável com:</p>
+                                <div class="tags" id="tags-sociavel"></div>
+                            </div>
+
+                            <div class="info-secao">
+                                <p class="info-titulo">Vive bem em:</p>
+                                <div class="tags" id="tags-ambiente"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="rodape-contato">
+                <div class="rodape-interno">
+                    <p>Faça uma adoção segura entrando em contato pelo nosso canal do WhatsApp.</p>
+                    <a href="#" id="btn-whatsapp" class="botao-whatsapp" target="_blank" rel="noopener noreferrer">Clique aqui</a>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="../dados.js"></script>
+        <script>
+            (function () {
+                const params = new URLSearchParams(window.location.search);
+                const secao = params.get('secao');
+                const indice = parseInt(params.get('indice'), 10);
+
+                const animal = (animaisPorSecao[secao] || [])[indice];
+
+                if (!animal) {
+                    document.querySelector('.conteudo-animal').innerHTML =
+                        '<a href="../adocao.html" class="botao-voltar">Voltar</a>' +
+                        '<p>Animal não encontrado.</p>';
+                    return;
+                }
+
+                document.title = animal.nome + ' - Adoção';
+
+                document.getElementById('animal-foto').src = '../' + animal.imagem;
+                document.getElementById('animal-foto').alt = animal.nome;
+                document.getElementById('animal-nome').textContent = 'Conheça ' + animal.nome;
+                document.getElementById('animal-descricao').textContent = animal.infos;
+
+                const mensagem = encodeURIComponent('Olá! Estou interessado em adotar ' + animal.nome + '. Poderia me passar mais informações?');
+                document.getElementById('btn-whatsapp').href = 'https://wa.me/5548998113548?text=' + mensagem;
+
+                function preencherTags(containerId, itens) {
+                    const container = document.getElementById(containerId);
+                    (itens || []).forEach(function (item) {
+                        const span = document.createElement('span');
+                        span.className = 'tag';
+                        span.textContent = item;
+                        container.appendChild(span);
+                    });
+                }
+
+                preencherTags('tags-cuidados', animal.cuidados);
+                preencherTags('tags-temperamento', animal.temperamento);
+                preencherTags('tags-sociavel', animal.sociavel);
+                preencherTags('tags-ambiente', animal.ambiente);
+            })();
+        </script>
+
+    </body>
+
+</html>
