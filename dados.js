@@ -215,6 +215,54 @@ const animaisPorSecao = {
             temperamento: ['Agressivo'],
             sociavel: ['Cão macho'],
             ambiente: ['Casa com quintal']
+        },
+        {
+            nome: 'Cher',
+            detalhes: 'Grande | Fêmea | 10 anos',
+            infos: 'Cher é calma, medrosa, sociável com cães fêmeas e machos, e vive bem em casa.',
+            imagem: 'fotos animais/CHER.png',
+            alt: 'Cachorro disponível para adoção',
+            pagina: 'animais/cachorros.html?secao=cachorros&indice=18',
+            cuidados: ['Castrado', 'Vermifugado', 'Vacinado'],
+            temperamento: ['Calmo', 'Medroso'],
+            sociavel: ['Cão fêmea', 'Cão macho'],
+            ambiente: ['Casa']
+        },
+        {
+            nome: 'Zé Pequeno',
+            detalhes: 'Médio | Macho | 8 anos',
+            infos: 'Zé Pequeno é agitado, sociável com desconhecidos e cães fêmeas, e vive bem em casa.',
+            imagem: 'fotos animais/ZÉ PEQUENO.png',
+            alt: 'Cachorro disponível para adoção',
+            pagina: 'animais/cachorros.html?secao=cachorros&indice=19',
+            cuidados: ['Castrado', 'Vermifugado', 'Vacinado'],
+            temperamento: ['Agitado'],
+            sociavel: ['Desconhecidos', 'Cão fêmea'],
+            ambiente: ['Casa']
+        },
+        {
+            nome: 'Flôr',
+            detalhes: 'Grande | Fêmea | 5 anos',
+            infos: 'Flôr é calma, medrosa, sociável com cães fêmeas e machos, e vive bem em casa.',
+            imagem: 'fotos animais/FLÔR.png',
+            alt: 'Cachorro disponível para adoção',
+            pagina: 'animais/cachorros.html?secao=cachorros&indice=20',
+            cuidados: ['Castrado', 'Vermifugado', 'Vacinado'],
+            temperamento: ['Calmo', 'Medroso'],
+            sociavel: ['Cão fêmea', 'Cão macho'],
+            ambiente: ['Casa']
+        },
+        {
+            nome: 'Capitu',
+            detalhes: 'Médio | Fêmea | 10 anos',
+            infos: 'Capitu é agitada, brincalhona, sociável com cães fêmeas e machos, e vive bem em casa.',
+            imagem: 'fotos animais/CAPITU.png',
+            alt: 'Cachorro disponível para adoção',
+            pagina: 'animais/cachorros.html?secao=cachorros&indice=21',
+            cuidados: ['Castrado', 'Vermifugado', 'Vacinado'],
+            temperamento: ['Agitado', 'Brincalhão'],
+            sociavel: ['Desconhecidos', 'Cão fêmea', 'Cão macho'],
+            ambiente: ['Casa']
         }
     ],
     gatos: [],
